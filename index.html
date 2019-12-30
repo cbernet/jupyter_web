@@ -2,67 +2,13 @@
 
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="css/pygments/notebook/colorful.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/notebook.css" rel="stylesheet">
   </head>
 
   <body>
-    <div class='container'>
-	<h1>Integrating a Jupyter Notebook in a Web Page
-	</h1>
+    <h1>Integrating a Jupyter Notebook in a Web Page</h1>
+    <p>Some text.</p> 
 
-	<p>With a couple tips about scientific blogging: equations with MathJax, and code highlighting with Pygments.</p> 
-
-	<h2>Math Equations with MathAjax</h2>
-
-	<p>Here is a simple equation, $E=mc^2$, written inline by enclosing it in two equal signs like this:
-	<code>
-	  $E=mc^2$.
-	</code>
-	</p>
-
-	<p>
-	  For larger equations, we use two dollar signs on each side of the equation, with one empty line before, and one empty line after, like this:</p>
-	  <pre>
-	    $$the long equation...$$
-	  </pre>
-	<p>And we get:</p> 
-
-	$$
-	\mathcal{L}=\bar{\psi}\left(i\gamma^{\mu}\partial_  {\mu}-m\right)\psi +\tfrac{1}{2}\left(|\partial_{\mu}\phi |^2-m_{\phi}^2|\phi |^2\right)+g\phi\bar{\psi}\psi
-	$$
-
-	<h2>Syntax highlighting with Pygments</h2>
-
-	<p>You will see below that the code within the jupyter notebook is highlighted properly. This is because I have compiled a specific set of pygments CSS for the highlighted code class in the jupyter notebook.</p>
-	
-	<p>For code that is written directly in this html file, we need to do something else. Pygmentation actually occurs in the render script, and the code here is replaced by pygmentized html code generated in the render script.</p>
-
-<pre>import os
-import re
-
-input_file = 'template.html'
-output_file = 'index.html'
-
-include_pattern = re.compile(r'^\s*\{\%\s+include\s+(\S+)\s+\%\}\s*$')
-
-with open(output_file, 'w') as outfile:
-    with open(input_file) as infile:
-        for line in infile.readlines():
-            m = include_pattern.match(line)
-            if m:
-                include_file = m.group(1)
-                with open(include_file) as incfile:
-                    outfile.writelines(incfile.readlines())
-            else:
-                outfile.write(line)
-</pre>	
-	<p> And finally, here is a jupyter notebook, converted to html and included in this html file:</p>
-
-
+    
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -760,25 +706,6 @@ For category 0, the underlying probability distribution is a 2D Gaussian centere
 </div>
  
 
-    </div>
- 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-
-    <!-- mathjax -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script>
-      MathJax = {
-      tex: {
-       inlineMath: [['$', '$'], ['\\(', '\\)']]
-      },
-      svg: {
-       fontCache: 'global'
-      }
-      };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    
   </body>
-  
 </html>
