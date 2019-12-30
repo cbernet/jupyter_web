@@ -2,13 +2,7 @@
 
 This repository demonstrates how to perform a full integration of a jupyter notebook in a web page. 
 
-The code is highlighted with [pygments](https://pygments.org/). 
-
-Math equations are rendered with [MathJax](https://www.mathjax.org/). 
-
-The jupyter notebook is converted to HTML with [nbconvert](https://nbconvert.readthedocs.io/en/latest/). 
-
-Custom CSS classes are provided for a consistent style between the included jupyter HTML file, and the mother HTML page. 
+The code is highlighted with [pygments](https://pygments.org/). Math equations are rendered with [MathJax](https://www.mathjax.org/). The jupyter notebook is converted to HTML with [nbconvert](https://nbconvert.readthedocs.io/en/latest/). Custom CSS classes are provided fora  consistent style between the included jupyter HTML file, and the the mother HTML page. 
 
 ## Description of the repository
 
