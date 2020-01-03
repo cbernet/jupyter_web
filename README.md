@@ -4,15 +4,17 @@ This repository demonstrates how to perform a full integration of a jupyter note
 
 The code is highlighted with [pygments](https://pygments.org/). Math equations are rendered with [MathJax](https://www.mathjax.org/). The jupyter notebook is converted to HTML with [nbconvert](https://nbconvert.readthedocs.io/en/latest/). The main style is from [bootstrap](https://getbootstrap.com/). Custom CSS classes are provided in this repo for a  consistent style between the included jupyter HTML file, and the mother HTML page. 
 
+This setup is fully explained in my article [https://thedatafrog.com/jupyter-notebooks-web-pages]().
+
 ## Description of the repository
 
-The file [overfitting.html]() has been generated with 
+The file [templates/overfitting.html](templates/overfitting.html) has been generated with 
 
 ```
 jupyter nbconvert --execute --template basic overfitting.ipynb
 ```
 
-[template.html](template.html) is the template web page in which we want to include [overfitting.html](overfitting.html).
+[templates/main.html](templates/main.html) is the template web page in which we want to include 
 
 [render.py](render.py) is a simple custom python script that generates [index.html](index.html) from the template. This script is just for demonstration purposes. For real websites, I use django and its template engine. 
 
