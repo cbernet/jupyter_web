@@ -36,3 +36,8 @@ And open the resulting `index.html` in your browser to see the results.
 
 **If you edit `template.html` do not forget to render again.**
 
+## Results
+
+Here is what I get in my django website: 
+
+![](blog_screenshot.png)
