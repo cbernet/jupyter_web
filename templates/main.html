@@ -2,13 +2,29 @@
 
 <html>
   <head>
+    <link rel="stylesheet"
+	  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	  crossorigin="anonymous">
+    <link href="css/notebook.css" rel="stylesheet">
+    <link href="css/pygments/notebook/colorful.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
   </head>
 
   <body>
-    <h1>Integrating a Jupyter Notebook in a Web Page</h1>
-    <p>Some text.</p> 
+    <div class="container">
+      <h1>Integrating a Jupyter Notebook in a Web Page</h1>
+      <p>Some text.</p>
 
-    {% include 'overfitting.html' %}
-    
+      <h2>A code section </h2>
+      <p>Here is some code:</p>
+      <pre>
+import foo
+print foo.bar()
+      </pre>
+
+      {% include 'overfitting.html' %}
+      
+    </div>
   </body>
 </html>
